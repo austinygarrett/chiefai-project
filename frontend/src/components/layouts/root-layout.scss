@@ -1,0 +1,38 @@
+@use '../../variables';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: variables.$background-primary;
+}
+
+html {
+  background-color: variables.$background-primary;
+}
+
+.content-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex: 1;
+  background-color: variables.$background-primary;
+  padding: 1vw;
+}
+
+main {
+  background-color: variables.$background-primary;
+  flex: 1;
+  margin: 0;
+  overflow: auto;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media (max-width: 991px) {
+  .side-navigation {
+    display: none;
+  }
+
+  main {
+    margin-left: 0;
+  }
+}

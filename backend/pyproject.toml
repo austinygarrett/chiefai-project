@@ -1,0 +1,71 @@
+[tool.poetry]
+name = "chiefai-technical-project-backend"
+version = "0.3.0"
+description = "ChiefAI Technical Project Backend"
+license = "MIT"
+authors = ["Austin Garrett <austinygarrett@gmail.com>"]
+readme = "README.md"
+repository = "https://github.com/austinygarrett/chiefai-project"
+packages = [
+    {include = "app"}
+]
+
+[tool.poetry.dependencies]
+python = "^3.13.5"
+fastapi = "^0.110.0"
+alembic = "^1.13.1"
+uvicorn = "^0.28.0"
+pydantic = "^2.6.4"
+psycopg2-binary = "^2.9.9"
+python-multipart = "^0.0.9"
+requests = "^2.31.0"
+python-dotenv = "^1.0.1"
+loguru = "^0.7.2"
+psycopg2 = "^2.9.9"
+hypercorn = "^0.16.0"
+asgi-correlation-id = "^4.3.1"
+greenlet = "^3.0.3"
+httpx = "^0.27.0"
+python-jose = "^3.3.0"
+sqlalchemy = "2.0.40"
+sqlacodegen = "3.0.0rc5"
+pydantic-settings = "^2.2.1"
+passlib = {extras=["bcrypt"], version = "^1.7.4"}
+icalendar = "^6.3.1"
+asyncpg = "^0.30.0"
+faiss-cpu = "^1.11.0.post1"
+numpy = "^2.3.1"
+
+[tool.poetry.group.dev.dependencies]
+coverage = "^7.4.3"
+pytest = "^8.1.1"
+pytest-cov = "^4.1.0"
+asgi-lifespan = "^2.1.0"
+pytest-asyncio = "^0.23.5.post1"
+ruff = "^0.3.2"
+
+[tool.ruff]
+exclude = []
+line-length = 200
+indent-width = 4
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "UP", "W", "I"]
+ignore = ["E266", "W291"]
+fixable = ["ALL"]
+unfixable = []
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401", "F403"]
+
+[tool.ruff.format]
+quote-style = "double"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+docstring-code-format = false
+docstring-code-line-length = "dynamic"
+
+[build-system]
+requires = ["poetry-core>=1.8.0"]
+build-backend = "poetry.core.masonry.api"

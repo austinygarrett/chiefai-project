@@ -1,0 +1,92 @@
+@use '../../../variables';
+
+.header {
+  padding-top: var(--mantine-spacing-sm);
+  position: sticky;
+  top: 0;
+  z-index: 201;
+  height: 75px;
+
+  &.unauthenticated {
+    position: absolute;
+    width: 100%;
+  }
+}
+.top-bar-upgrade-button {
+  background: linear-gradient(135deg, #ff00ff 0%, #655cf4 50%, #ff00ff 100%);
+  background-size: 400% 400%;
+  animation: gradientFlow 20s ease infinite;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.1);
+  }
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.mainSection {
+  @media (max-width: 991px) {
+    .top-bar-main-section {
+      flex-wrap: nowrap;
+    }
+
+    .top-bar-upgrade-button {
+      display: none;
+    }
+  }
+}
+
+.user {
+  color: black;
+  padding-right: 4vw;
+  border-radius: var(--mantine-radius-sm);
+  transition: background-color 100ms ease;
+
+  p {
+    font-family: 'Inter';
+  }
+
+  div.avatar {
+    background-color: black;
+  }
+
+  .profile-summary {
+    flex-direction: column;
+    gap: 5px;
+    align-items: baseline;
+  }
+
+  @media (max-width: 760px) {
+    .profile-summary {
+      display: none;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+
+  button,
+  button:hover {
+    background-color: variables.$primary-color !important;
+  }
+}
+
+.logo {
+  height: 24px;
+  padding-left: var(--mantine-spacing-md);
+}

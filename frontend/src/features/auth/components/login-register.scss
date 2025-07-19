@@ -1,0 +1,40 @@
+@use '../../../variables';
+
+.login-register-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 0;
+  & > * {
+    width: 100%;
+  }
+
+  .login-error-text {
+    color: variables.$status-alert;
+    text-align: center;
+    padding-bottom: var(--mantine-spacing-sm);
+  }
+
+  .intro-text {
+    font-family: 'Poppins';
+    font-weight: bold !important;
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .notice {
+    text-align: center;
+    font-size: smaller;
+    font-family: 'Inter';
+  }
+
+  .submit-button {
+    background-color: variables.$primary-color;
+    color: variables.$mono-secondary;
+  }
+  .sub-text {
+    font-size: var(--mantine-font-size-sm);
+    color: variables.$text-secondary-color;
+    padding-bottom: var(--mantine-spacing-md);
+  }
+}
