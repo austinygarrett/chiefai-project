@@ -1,34 +1,61 @@
-Backend Server Requirements:
-Prequisites installed:
-Backend
-- Postgresql 17.5 (https://www.postgresql.org/download/)
-- poetry (https://python-poetry.org/docs/#installation)
-- python 3.13.5 (https://www.python.org/downloads/)
+# Project Setup Instructions
 
-Frontend
-- Nodejs v22.17.1 (https://nodejs.org/en/download)
+## 📦 Prerequisites
 
-Setup:
+### Backend
+- **PostgreSQL** 17.5  
+  [Download PostgreSQL](https://www.postgresql.org/download/)
+- **Poetry**  
+  [Install Poetry](https://python-poetry.org/docs/#installation)
+- **Python** 3.13.5  
+  [Download Python](https://www.python.org/downloads/)
 
-Backend (./backend)
-1.) Run postgresql and modify .db.env file to match connection credentials (defaults - port: 5433, username: postgres, password: postgres)
-2.) Ensure python is installed and correct version
-`python --version`
-3.) Install dependencies using poetry
-`poetry install`
-4.) Run alembic to initialize database 
-`poetry run alembic upgrade head` 
-5.) Run the server locally
-`poetry run uvicorn app.main:app --host 0.0.0.0 --port 8080 --reload` 
+### Frontend
+- **Node.js** v22.17.1  
+  [Download Node.js](https://nodejs.org/en/download)
 
-Frontend (./frontend)
-1.) Make sure node is properly installed and correct version
-`node --version`
-2.) Install dependencies
-`npm install`
-3.) Run locally
-`npm run dev`
+---
 
-Default login to the application:
+## 🚀 Setup Instructions
+
+### 🔧 Backend (`./backend`)
+
+1. **Start PostgreSQL**, and update the `.db.env` file with the appropriate database credentials.  
+
+2. **Verify Python version**
+```bash
+  python --version
+```
+3. Install dependencies using poetry 
+```bash
+poetry install
+```
+4. Run Alembic to initialize the database
+```bash
+poetry run alembic upgrade head
+```
+5. Start server
+```bash
+poetry run uvicorn app.main:app --host 0.0.0.0 --port 8080 --reload
+```
+
+###  Frontend (`./frontend`)
+
+1. **Make sure node is properly installed and correct version
+```bash
+node --version
+```
+2. **Install dependencies**
+```bash
+npm install
+```
+3. **Run locally**
+```bash
+npm run dev
+```
+
+### 🔐 Default Login Credentials
 Username: chiefaiuser@chiefai.com
+
 Password: Test123!
+
