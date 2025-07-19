@@ -20,7 +20,12 @@
 
 ### 🔧 Backend (`./backend`)
 
-1. **Start PostgreSQL**, and update the `.db.env` file with the appropriate database credentials.  
+1. **Start PostgreSQL** (assumes port 5433, username postgres, password postgres)
+
+DB string can be editted in `./backend/app/core/settings/dev.py`.
+
+Ideally would be stored in .env file for security if project were to be continued further.
+
 2. **Update API Key in .env file**
 ```bash
 OPENAI_API_KEY=<insert API key here>
@@ -33,15 +38,15 @@ Send me a message / email if you do not have an API Key available and I can prov
 ```bash
   python --version
 ```
-4. Install dependencies using poetry 
+4. **Install dependencies using poetry**
 ```bash
 poetry install
 ```
-5. Run Alembic to initialize the database
+5. **Run Alembic to initialize the database**
 ```bash
 poetry run alembic upgrade head
 ```
-6. Start server
+6. **Start server**
 ```bash
 poetry run uvicorn app.main:app --host 0.0.0.0 --port 8080 --reload
 ```
