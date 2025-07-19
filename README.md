@@ -29,7 +29,7 @@ API keys are automatically deactivated in public repositories by OpenAI.
 
 Send me a message if you do not have an API Key available and I can provide one for usage.
 
-4. **Verify Python version**
+3. **Verify Python version**
 ```bash
   python --version
 ```
