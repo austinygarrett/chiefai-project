@@ -21,20 +21,27 @@
 ### 🔧 Backend (`./backend`)
 
 1. **Start PostgreSQL**, and update the `.db.env` file with the appropriate database credentials.  
+2. **Update API Key in .env file**
+```bash
+OPENAI_API_KEY=<insert API key here>
+```
+API keys are automatically deactivated in public repositories by OpenAI.
 
-2. **Verify Python version**
+Send me a message if you do not have an API Key available and I can provide one for usage.
+
+4. **Verify Python version**
 ```bash
   python --version
 ```
-3. Install dependencies using poetry 
+4. Install dependencies using poetry 
 ```bash
 poetry install
 ```
-4. Run Alembic to initialize the database
+5. Run Alembic to initialize the database
 ```bash
 poetry run alembic upgrade head
 ```
-5. Start server
+6. Start server
 ```bash
 poetry run uvicorn app.main:app --host 0.0.0.0 --port 8080 --reload
 ```
@@ -56,6 +63,5 @@ npm run dev
 
 ### 🔐 Default Login Credentials
 Username: chiefaiuser@chiefai.com
-
 Password: Test123!
 
