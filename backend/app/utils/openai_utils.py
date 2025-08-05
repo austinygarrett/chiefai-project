@@ -47,6 +47,4 @@ def ask_gpt_with_context(question: str, context: str) -> str:
             {"role": "user", "content": prompt}
         ]
     )
-    
-    print(f"{response}")
     return response.choices[0].message.content.strip()
