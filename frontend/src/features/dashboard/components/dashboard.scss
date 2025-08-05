@@ -1,0 +1,60 @@
+.dashboard-component-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  .briefing-book-container {
+    height: '100%';
+    display: 'flex';
+    flex-direction: 'column';
+
+    .briefing-book-content {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+
+      .briefing-book {
+        display: flex;
+        width: 100%;
+        min-width: 40vw;
+        height: 100%;
+
+        & > * {
+          flex: 1;
+        }
+      }
+    }
+  }
+
+  .calendar-container {
+    height: 85vh;
+    max-height: 85vh;
+    width: 100%;
+    overflow: auto;
+  }
+  .rbc-calendar {
+    font-family: 'Inter';
+    font-size: var(--mantine-font-size-sm);
+  }
+
+  .ask-ai-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 85vh;
+
+    .ask-ai-content {
+      flex-grow: 1;
+      overflow-y: auto;
+      padding: 16px;
+      height: 100%;
+    }
+  }
+
+  .mantine-Textarea-input {
+    height: 100%;
+  }
+}
