@@ -61,7 +61,6 @@ export const DashboardComponent = () => {
       },
       events: {
         click: () => {
-          console.log('click');
           const messages = chatRef.current?.getMessages?.();
           const lastAssistantMsg = messages?.at(-1)?.text;
 
